@@ -1,0 +1,21 @@
+
+<body onload="loadFunc()">
+        <div id="loading"></div>
+
+
+
+-------------------------------
+
+#loading {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/cursor.gif) center ;
+    z-index: 99999
+}
+
+----------------------------------------------
+var preloader = document.getElementById('loading');
+    function loadFunc() {
+        preloader.style.display = 'none';
+    }

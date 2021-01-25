@@ -1,0 +1,1393 @@
+@font-face {font-family: Kufi; src: url('../fonts/Droid.Arabic.Kufi.ttf');}
+#loading {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/cursor.gif) center ;
+    z-index: 99999
+}
+
+body{
+    font-family: Kufi, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    --main-color:#21ACB4;
+    
+}
+ul {list-style: none;padding: 0;margin: 0;}
+a {text-decoration: none !important;}
+p {margin-bottom: 0;}
+
+header {
+    padding: 0;
+    background: #000;
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    left: 0; 
+    transition: all 1s ease-in-out;
+        
+}
+header .logo img {
+    width: 50%;
+    padding-top: 5px;
+    transition: all .6s ease-in-out
+}
+
+/*main header */
+.main-header {
+    background: linear-gradient(rgba(0,0,0,0.99),rgba(0,0,0,0.8), rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+
+header .social-media {
+    text-align: left;
+    padding: 20px 0 0 0 ;
+}
+header .social-media ul {
+   
+}
+header .social-media ul li{
+    float: left;
+    width: 25px;
+    height: 25px;
+    line-height: 28px;
+    display: flex;
+    margin-right: 9px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+header .social-media ul li:hover {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%
+}
+header .social-media ul li:nth-child(1):hover{
+    background: #00AEEF
+}
+header .social-media ul li:nth-child(2):hover{
+    background: #3b5998
+}
+header .social-media ul li:nth-child(3):hover{
+    background: #00AEEF
+}
+header .social-media ul li:nth-child(4):hover{
+    background: linear-gradient(#D12B99, #FAC473);
+}
+header .social-media ul li:nth-child(5):hover{
+    background: #ff0000
+}
+header .social-media ul li:nth-child(6):hover{
+    background: #25d366
+}
+header .social-media ul li:nth-child(7):hover{
+    background: #0088cc
+}
+header .social-media ul li:nth-child(8):hover{
+    background: #a559d4
+}
+header .social-media a {
+    color: #FFF;
+    font-weight: bold;
+    padding: auto;
+    margin: auto 
+}
+
+header .navbar-default {
+    background: none;
+    border: none;
+    float: left;
+    padding:10px 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    transition: all .5s ease-in-out;
+}
+.navbar-collapse {
+    padding-left: 0
+}
+
+.navbar-default .navbar-nav > li > a{
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    transition: all .3s ease-in-out
+}   
+.nav .menu {
+    text-align: center
+}
+.nav .menu .drop-menu {
+    text-align: center;
+    background: #000;
+    width: 180px;
+    display: none;
+    position: absolute
+}
+.nav .drop-menu li {
+    padding: 10px;
+    transition: all .3s ease-in-out
+}
+.drop-menu li:hover {
+    background: var(--main-color);
+    padding-left: 50px
+}
+.drop-menu li a  {
+    color: #fff;
+    display:
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: var(--main-color);
+    font-size: bold
+}
+
+.search-area {
+    position: fixed;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    text-align: center;
+    padding-left:  10%;
+    padding-right: 10%;
+    display: none; 
+}
+.search-area .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-area input {
+    position: absolute;
+    top: calc(50% - 25px);
+    width: 80%;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    
+}
+.search-area input::placeholder {
+    font-size: 20px
+}
+.search-area .fa-times {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #FFF;
+    font-size: 20px
+}
+/*End header*/
+
+/*start slider*/
+.slider .main-carousel {
+    overflow: hidden
+}
+.slider .carousel-cell {
+    width: 100%;
+    margin-right: 0;
+    position: relative;  
+}
+.slider .flickity-prev-next-button {
+    width: 40px;
+    height: 40px;
+    border-radius:0;
+    background:rgba(0,0,0,.4); 
+    color: #FFF;
+}
+.slider .flickity-prev-next-button:hover {
+  background: rgba(0,0,0,.6);  
+}
+.slider .flickity-prev-next-button .arrow {
+  fill: #FFF;
+}
+.slider .carousel-cell img {
+    width: 100%;
+    height: 100vh;
+}
+.slider .carousel-cell .info {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5),rgba(0,0,0,0.7), rgba(0,0,0,0.99));
+    padding: 20px 0 40px 0
+}
+.slider .carousel-cell .info h3 {
+    color: #DDD;
+    padding-bottom: 10  px;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    top: 30px
+    
+}
+.slider .is-selected.carousel-cell:nth-child(1) .info h3 {
+    animation: uptitle1 2s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    top: 0
+}
+.slider .is-selected.carousel-cell:nth-child(2) .info h3 {
+    animation: uptitle2 2s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    top: 0
+}
+
+@keyframes uptitle1{
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        top: 30px
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        top: 0
+    }
+}
+@keyframes uptitle2{
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        top: -80px
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        top: 0
+    }
+}
+.slider .is-selected.carousel-cell:nth-child(3) .info h3 {
+    animation: uptitle3 2s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    top: 0
+}
+@keyframes uptitle3{
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        top: -500px
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        top: 0
+    }
+}
+.slider .carousel-cell .info h3::after {
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 73px);
+    top: 30px;
+    content: "";
+    width: 146px;
+    border-bottom: 3px solid #E8A141;
+    opacity: 0;
+    visibility: hidden;
+}
+.slider .is-selected.carousel-cell:nth-child(1) .info h3::after,
+.slider .is-selected.carousel-cell:nth-child(2) .info h3::after{
+    opacity: 1;
+    visibility: visible;
+    top: 15px;
+    animation: upline 4s ease-in-out
+}
+@keyframes upline{
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        top: 40px
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        top: 40px
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        top: 15px
+    }
+}
+.slider .is-selected.carousel-cell:nth-child(3) .info h3::after {
+    opacity: 1;
+    visibility: visible;
+    top: 15px;
+    animation: upline3 4s ease-in-out
+}
+@keyframes upline3{
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        top: -140px
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        top: -140px
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        top: 15px
+    }
+}
+.slider .carousel-cell .info p {
+    color: #E8A141;
+    font-size: 18px;
+    margin-top: 25px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+.slider .is-selected.carousel-cell:nth-child(1) .info p {
+    animation: movepar1 5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    right: 0
+}
+
+@keyframes movepar1 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        right: -200px;
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        right: -200px;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        right: 0
+    }
+}
+.slider .is-selected.carousel-cell:nth-child(2) .info p {
+    animation: movepar2 5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    top: 0
+}
+@keyframes movepar2 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        left: -500px;
+        top: -70px
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        left: -500px;
+        top: -70px
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+        top: 0
+    }
+}
+
+.slider .is-selected.carousel-cell:nth-child(3) .info p {
+    animation: movepar3 5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+    top: 0
+}
+@keyframes movepar3 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        right: -500px;
+        top: -700px
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        right: -500px;
+        top: -700px
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+        top: 0
+    }
+}
+/*End slider*/
+
+/*start marquee*/
+.marquee-wrapper {
+    overflow: hidden;
+    border-right: 1px solid #fff;
+    height: 35px;
+    background: var(--main-color)
+}
+.marquee-wrapper .marquee {
+    direction: ltr;
+}
+.marquee-wrapper .marquee ul {
+    direction: rtl;
+}
+.marquee-wrapper .marquee li {
+    display: inline-block;
+    color: #fff;
+    line-height: 35px
+}
+.marquee-wrapper .marquee li p,
+head.marquee-wrapperer .marquee li img {
+    display: inline-block;
+}
+.marquee-wrapper .marquee li p a {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+.marquee-wrapper .marquee li p a:hover {
+    color: #000;
+}
+.marquee-wrapper .marquee li img {
+    margin: 0 30px;
+    width: 20px;
+    display: inline-block;
+}
+/*End marquee*/
+
+/*start news section*/
+.news-section .custom-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.news-section .img-box {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    z-index: 1;
+}
+.news-section .img-box:hover img {
+    filter: grayscale(0%);
+}
+
+.news-section img {
+    width: 100%;
+    height: 300px;
+    filter: grayscale(100%);
+    transition: all .3s ease-in-out
+}
+
+.news-section .img-box h3 {
+    text-align: center;
+    width:80px;
+    height: 30px;
+    color: #FFF;
+    position: absolute;
+    top: calc(50% - 13px);
+    right: calc(50% - 40px);
+    margin: 0
+    
+}
+/*end news section*/
+
+/*start about us*/
+.about-us {
+    background:url(../images/bg.jpg) no-repeat fixed center;
+    background-size: 100% 100%;
+    min-height: 550px;
+    padding: 109px 0 20px 0 
+}
+.about-us .img-box {
+    background: #D5CAB5;
+    margin-left: 10px;
+    padding: 30px;
+    height: 310px; 
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.about-us .img-box img {
+    width: 80%;
+}
+.about-us .text {
+    background: #F3F1E3;
+    padding: 15px;
+    margin-right: 20px;
+    line-height: 2em;
+    font-weight: bold;
+}
+/*End about us*/
+
+/*start others*/
+.others,
+.articles,
+.week-file-wrapper,
+.details,
+.course-schedule-wrapper{
+    background: #F2F2F2;
+    padding: 40px 0;
+}
+.others .articles-box,
+.details .main-news,
+.details .related-news,
+.video-wrapper .main-video,
+.video-wrapper .related-news{
+    background: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 22px
+}
+.others .articles-box h3,
+.newspaper h3,
+.beginnings h3,
+.articles h3,
+.week-file-wrapper h3,
+.initiatives-wrapper h3,
+.course-schedule-wrapper h3{
+    padding-bottom: 25px;
+    position: relative
+}
+.others .articles-box h3::after,
+.articles h3::after,
+.newspaper h3::after, 
+.beginnings h3::after,
+.week-file-wrapper h3::after,
+.initiatives-wrapper h3::after,
+.course-schedule-wrapper h3::after{
+    position: absolute;
+    content: "";
+    width: 30px;
+    bottom: 10px;
+    right: 0;
+    border-bottom: 5px solid #000
+}
+.others .articles-box .article,
+.articles .articles-box .article {
+    position: relative;
+    margin-bottom: 20px
+    
+}
+.others .articles-box .article .img-box{
+    width: 25%
+}
+.others .articles-box .article .img-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%  
+}
+.others .articles-box .article .info {
+    display: inline-block;
+    position: absolute;
+    width: 70%;
+    right: 28%;
+    top: -5px;
+    line-height: 2em
+}
+.others .articles-box .article .info h5,
+.articles .articles-box .article .info h5{
+    display: inline-block;
+    text-indent: 27px;
+    color: #B4BECB;
+    font-weight: bold
+}
+.others .articles-box .article .info p,
+.articles .articles-box .article .info p{
+    font-weight: bold;
+    height: 30px;
+    color: #333333
+}
+.others .article .info img {
+    position: absolute;
+    
+}
+.others .week-file,
+.others .interactions,
+.articles .article,
+.week-file-wrapper .week-file,
+.course-schedule-wrapper .course-box {
+    background: #FFFFFF;
+    margin: 0 10px 15px 10px;
+    padding-bottom: 15px 15px 0 15px
+}
+.others .week-file .img-box,
+.others .interactions .img-box,
+.articles .article .img-box,
+.week-file-wrapper .week-file .img-box,
+.details .related-news .img-box,
+.video-wrapper .related-news .img-box,
+.course-schedule-wrapper .course-box .img-box{
+    position: relative;
+    width: 100%
+}
+.others .week-file .img-box img,
+.others .interactions .img-box img {
+    width: 100%;
+    height: 100%
+}
+.others .week-file .img-box h5,
+.others .interactions .img-box h5,
+.articles .article .img-box h5,
+.week-file-wrapper .week-file .img-box .date,
+.details .related-news h5,
+.video-wrapper .related-news h5{
+    background: #FFF;
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    bottom: -10px
+}
+.others .week-file .info h4,
+.others .interactions h4,
+.week-file-wrapper .week-file .info h4{
+    font-weight: bold;
+    padding: 10px;
+    color: #333333
+}
+.others .week-file .info p,
+.others .interactions .info p,
+.week-file-wrapper .week-file .info p,
+.details .related-news p,
+.video-wrapper .related-news p{
+    color: #AAB1C0;
+    padding: 0 10px 10px 10px;
+    font-weight: bold;
+    
+}
+.ifografic {
+    padding: 20px 0;
+    
+}
+.ifografic img {
+    width: 100%
+}
+.initiatives .carousel-cell {
+    width: 100%;     
+}
+.initiatives .img-box {
+    width: 100%;
+    height: 100%
+}
+.initiatives .img-box img {
+    width: 100%;
+    height: 270px
+}
+.initiatives .carousel-cell .info,
+.course-schedule .info,
+.idrak-family .info,
+.initiatives-wrapper .initiatives .info{
+    background: #FFF;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    position: relative;
+    bottom: 22px;
+    right: calc(50% - 150px)
+}
+.initiatives .carousel-cell .info h5,
+.course-schedule .info h5,
+.idrak-family .info h5,
+.initiatives-wrapper .initiatives .info h5{
+    font-weight: bold;
+    color: var(--main-color);
+    position: relative
+}
+.initiatives .carousel-cell .info h5::after,
+.course-schedule .info h5::after,
+.idrak-family .info h5::after,
+.initiatives-wrapper .initiatives .info h5::after{
+    position: absolute;
+    content: "";
+    width: 84px;
+    height: 1px;
+    bottom: -7px;
+    right: 97px;
+    border-bottom: 2px solid #5D5D5D;
+}
+.initiatives .carousel-cell .info p,
+.course-schedule .info p,
+.idrak-family .info p,
+.initiatives-wrapper .initiatives .info p {
+    color: #333;
+    font-weight: bold;
+    padding: 10px 5px;
+    height: 4em;
+    overflow: hidden;
+    line-height: 1.6em;
+    
+}
+.initiatives .flickity-prev-next-button {
+    top: 100%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background:none;
+    
+}
+.initiatives .flickity-prev-next-button.next {
+    right: calc(50% - 30px)
+}
+.initiatives .flickity-prev-next-button.previous {
+    left: calc(50% - 30px)
+}
+
+.newspaper {
+    background: #FFF;
+    padding: 15px;
+    margin-right: 10px
+}
+
+.newspaper img {
+    width: 100%;
+    height: 250px
+}
+.newspaper p {
+    font-size: 16px;
+    padding-bottom: 10px
+}
+
+
+.others .interactions {
+    padding-bottom: 15px;
+    margin-right: 0;
+    margin-top: 45px;
+    margin-left: 10px
+}
+.others .tweets {
+    margin-top: 45px;
+    
+}
+.others .interactions li {
+    padding: 5px 10px;
+    font-weight: bold;   
+    position: relative
+}
+.others .interactions li .fa-circle {
+    font-size: 10px;
+    color: var(--main-color)
+}
+.tweets {
+    height: 750px
+}
+.tweets img {
+    width: 100%;
+    height: 300px
+}
+.beginnings {
+    background: #FFF;
+    padding: 10px 20px 60px 20px;
+    height: 300px;
+    margin-bottom: 20px
+}
+.beginnings .img-box {
+    width: 250px;
+    height: 120px ;
+    margin-right: 50px
+}
+.beginnings img {
+    width: 100%;
+    height: 100%
+}
+.course-schedule,
+.idrak-family {
+    margin-right: 15px
+}
+.course-schedule img,
+.idrak-family img {
+    width: 100%;
+    
+}
+
+/*End others*/
+
+/*start video*/
+.video {
+    background: var(--main-color);
+    padding: 20px
+}
+.video h4 {
+    color: #FFF;
+    padding-bottom: 15px;
+    position: relative
+}
+.video h4::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    border-bottom: 3px solid #FFF;
+    bottom: 0;
+    right: 0
+}
+.video .main-video {
+    margin-left: 15px
+}
+.video .main-video .img-box {
+    position: relative;
+    
+}
+.video .main-video img {
+    width: 100%
+}
+.video .main-video .img-box .fa-play {
+    color: #FFF;
+    background: #231F20;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 7px;
+    position: absolute;
+    top: calc(50% - 20px);
+    right: calc(50% - 20px);
+    cursor: pointer
+}
+.video .main-video p {
+    padding-top: 15px;
+    color: #FFF;
+    font-weight: bold;
+    line-height: 1.7em
+}
+.video .videos-box {
+    background: #FFF
+}
+.video .videos-box .sub-video {
+    height: 120px;
+    padding: 15px;
+    position: relative
+}
+.video .videos-box .sub-video img {
+    width: 35%;
+    height: 100%
+}
+.video .videos-box .sub-video a p {
+    color: #2B2E36;
+    display: inline-block;
+    position: absolute;
+    width: 61%;
+    right: 38%;
+    font-size: 16px;
+    padding: 5px;
+    height: 5.5em;
+    font-weight: bold;
+    line-height: 1.7em;
+    overflow: hidden;
+}
+.video .videos-box .sub-video span {
+    background: #231F20;
+    padding: 2px;
+    color: #FFF;
+    position: absolute;
+    bottom: 15px;
+    right: 16px;
+}
+
+/*End video*/
+
+/*start footer*/
+footer .top-part {
+    background: #231F20;
+    padding: 5px
+}
+footer .top-part .social-media ul {
+    padding-top: 30px
+}
+footer .top-part .social-media ul li {
+    display: inline-block;
+    font-size: 28px;
+}
+footer .top-part .social-media ul li:not(:last-child){
+    margin-left: 20px
+}   
+footer .top-part .social-media ul li a {
+    color: #6F7171;
+    transition: all .3s ease-in-out
+}
+footer .top-part .social-media ul li a:hover {
+    color: #bdbfbf;
+}
+footer .top-part .logo img {
+    width: 100%
+}
+footer .bottom-part {
+    background: var(--main-color);
+    padding: 25px 0;
+    
+}
+
+footer .bottom-part .site-map li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 20px
+    
+}
+footer .bottom-part .site-map li a {
+    color: #FFF;
+    font-weight: bold
+}
+/*End footer*/
+
+/*start scroll to top*/
+.scroll-to-top {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    width: 30px;
+    height: 30px;
+    z-index: 9999;
+    line-height: 30px;
+    color: #FFF;
+    background: #214B4F ;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    display: none
+}
+/*End scroll to top*/
+
+/*start articles page*/
+.articles,
+.video-wrapper,
+.initiatives-wrapper,
+.course-details-wrapper,
+.magazin-wrapper{
+    padding-top: 120px;
+    background: #F2F2F2
+}
+.articles .article a {
+    color: black
+}
+.articles .article .img-box img,
+.week-file-wrapper .week-file .img-box img,
+.initiatives-wrapper .initiatives img,
+.course-schedule-wrapper .course-box img{
+    width: 100%;
+    height: 250px
+}
+.articles .article a h4 {
+    font-weight: normal;
+    padding: 15px
+}
+
+/*End articles page*/
+
+/*start week-file*/
+.week-file-wrapper,
+.details,
+.course-schedule-wrapper{
+    padding-top: 120px
+}
+.week-file-wrapper .week-file .info p,
+.details .related-news p,
+.video-wrapper .related-news p{
+    height: 40px;
+    overflow: hidden;
+    padding-bottom: 20px
+}
+/*End week-file*/
+
+/*start news-details*/
+.details {
+    
+}
+.details .related-news-box,
+.video-wrapper .related-news-box {
+    margin-top: 80px;
+}
+.details .main-news h2,
+.video-wrapper .main-video h2{
+    padding: 15px;
+    font-weight: bold;
+    
+}
+.details .main-news .img-box,
+.video-wrapper .main-video .img-box{
+    height: 550px
+}
+.details .main-news img,
+.video-wrapper .main-video img{
+    width: 100%;
+    height: 100%
+}
+.details .main-news .info,
+.video-wrapper .main-video .info{
+    padding-top: 20px
+}
+.details .main-news .info span,
+.video-wrapper .main-video .info span{
+    color: var(--main-color);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold
+}
+.details .main-news .info p,
+.video-wrapper .main-video .info p{
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.8em 
+}
+.details .related-news-box h3,
+.last-news h3,
+.video-wrapper h3 {
+    
+    color: var(--main-color);
+    background: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 0
+}
+.details .related-news,
+.video-wrapper .related-news{
+    background: #FFF;
+    margin-left: 12px;
+    
+}
+.details .related-news .img-box,
+.video-wrapper .related-news .img-box{
+    margin-bottom: 10px
+}
+.details .related-news img,
+.video-wrapper .related-news img{
+    width: 100%;
+    height: 200px
+}
+.last-news {
+    margin-right: 10px;
+    margin-left: 10px
+}
+
+.last-news .sub-news {
+    position: relative;
+    background: #FFF;
+    margin-bottom: 15px
+}
+.last-news .sub-news .img-box {
+    width: 33%
+}
+.last-news .sub-news .img-box img {
+    width: 100%;
+    height: 80px
+}
+.last-news .sub-news p {
+    color: #333;
+    height: 50px;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    width: 62%;
+    right: 38%;
+    top: 0;
+    padding: 10px
+}
+
+/*End news-details*/
+
+/*.start course-schedule*/
+.course-schedule-wrapper .course-box .info {
+    padding: 10px
+}
+.course-schedule-wrapper .course-box .info h5 {
+    font-weight: bold;
+    color: #6C96F0
+}
+.course-schedule-wrapper .course-box .info h5:first-child {
+    color: var(--main-color)
+}
+.course-schedule-wrapper .course-box {
+    perspective: 1000px; 
+    background: #FFF
+}
+.course-schedule-wrapper .course-box .flip-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .8s ease-in-out;
+    transform-style: preserve-3d;
+}
+.course-schedule-wrapper .course-box:hover .flip-box {
+    transform: rotateY(180deg);
+}
+.course-box .flip-box .front-side,
+.course-box .flip-box .back-side { 
+    backface-visibility:hidden;
+}
+.course-box .flip-box .back-side {
+    height: 352px;
+    line-height: 2em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    background: var(--main-color);
+    transform: rotateY(180deg);
+    color: #FFF;
+    text-align: center;
+    padding: 15px;
+}
+
+/*start course-schedule*/
+
+/*start course-details*/
+.course-details-wrapper h3 {
+    margin-bottom: 25px
+}
+.course-details-wrapper .main-img {
+    width: 100%;
+    height: 400px
+}
+.course-details-wrapper .img-box {
+    position: relative;
+    
+}
+.course-details-wrapper .img-box .info {
+    background: #FFF;
+    width: 80%;
+    position: absolute;
+    bottom: -25%;
+    right: calc(50% - 40%);
+    text-align: center;
+    
+    
+}
+.course-details-wrapper .img-box .info .part h5,
+.course-details-wrapper .img-box .info .price,
+.course-details-wrapper .img-box .info a {
+    font-weight: bold
+}
+.course-details-wrapper .img-box .info .part {
+    height: 150px;
+    padding: 15px;
+    text-align: center;
+}
+.course-details-wrapper .img-box .info .part:not(:last-child) {
+    border-left: 1px solid #AAA;
+}
+.course-details-wrapper .img-box .info .part .price {
+    display: block;
+    margin-bottom: 25px;
+}
+.course-details-wrapper .img-box .info .part a {
+    background: var(--main-color);
+    color: #FFF;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-weight: bold
+    
+}
+.course-details-wrapper .img-box .info .trainer {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-weight: bold
+}
+.course-details-wrapper .content {
+    margin-top: 140px;
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+.course-details-wrapper .content .part {
+    margin-bottom: 30px
+}
+.course-details-wrapper .content h5 {
+    position: relative;
+    padding: 8px
+}
+.course-details-wrapper .content h5::after {
+    position: absolute;
+    content: "";
+    width: 58px;
+    bottom: 2px;
+    right: 4px;
+    border-bottom: 2px solid var(--main-color);
+}
+.course-details-wrapper .content .part li {
+    font-weight: bold;
+    padding-right: 10px;
+    position: relative;
+}
+.course-details-wrapper .content .part li::before {
+    position: absolute;
+    top: 0;
+    content: "-";
+    text-indent: -8px; 
+}
+.course-details-wrapper .content .part p {
+    font-weight: bold;
+    line-height: 1.7em;
+}
+/*End course-details*/
+
+/*start Idrak magazin*/
+.magazin-wrapper {
+    padding-bottom: 30px
+}
+.magazin-wrapper .social-media {
+    padding: 20px 0;
+}
+.magazin-wrapper .social-media ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.magazin-wrapper .social-media ul li a {
+    color: #AAA;
+    font-size: 20px
+}
+.magazin-wrapper .slider {
+    margin-bottom: 30px;
+    position: relative
+}
+.magazin-wrapper .slider img {
+    width: 100%;
+}
+.magazin-wrapper .slider .slide-num {
+    background: #AAA;
+    display: block;
+    text-align: center;
+    width:40px;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: calc(50% - 20px)
+    
+}
+.magazin-wrapper .pdf-viwe,
+.magazin-wrapper .download {
+    background: var(--main-color);
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin-bottom: 30px
+}
+/*End Idrak magazin*/
+
+/*media*/
+@media(max-width:767px) {
+    header {
+        height: 150px
+    }
+    header .logo {
+        margin-right: calc(30% - 40px);
+        text-align: center
+    }
+    header .logo img {
+        text-align:center
+    }
+    .nav.navbar-nav {
+        overflow-y: scroll;
+        height: 100vh;
+        margin-top: 0;
+        
+    }
+    .navbar .navbar-collapse {
+       background: #000000;
+        text-align: center;
+        
+    }
+      header .navbar-default{
+        width: 100%
+    }
+    .navbar-default .navbar-toggle{
+        border: none;
+        background: none;
+        position: fixed;
+        right: 15px;
+        top: 20px
+        
+    }
+  
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus {
+        background: none
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #FFF
+        
+    }
+    .navbar-default .navbar-nav > li:hover {
+        background: var(--main-color)
+    }
+    .navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus {
+        color: #FFF
+    } 
+    .navbar-header {
+        position: relative
+    }
+    .nav .drop-menu {
+        width: auto
+    }
+    /**/
+    .dropdown-menu {
+        margin-top: 0;
+        
+    }
+    .dropdown-menu > li {
+        text-align: center;
+        background: var(--main-color);
+        padding:7px
+    }
+    .dropdown-menu > li > a {
+        color: #FFF;
+    }
+    .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus  {
+        color: var(--main-color);
+        background: #FFF;
+    }
+    header .social-media {
+        text-align: center;
+        margin-left: 29px
+    }
+    
+    .initiatives {
+        margin-bottom: 30px;
+        margin-left: auto
+    }
+    .others .interactions {
+        margin-left: auto
+    }
+    .about-us .img-box {
+        margin-left: auto
+    }
+    .about-us .img-box img {
+        width: 45%
+    }
+    .about-us .text {
+        margin-right: auto;
+        margin-top: 15px
+    }
+    .others .week-file,
+    .others .interactions {
+        margin-right: auto
+    }
+    .newspaper {
+        margin-right: auto
+    }
+    .video .main-video {
+        margin-left: auto;
+        margin-bottom: 20px
+    }
+    footer .top-part .social-media ul li {
+        font-size: 19px
+    }
+    footer .top-part {
+        text-align: center
+    }
+    footer .top-part .logo img {
+        width: 40%
+    }
+    .articles, .video-wrapper, .initiatives-wrapper, .course-details-            wrapper, .magazin-wrapper {
+        padding-top: 160px
+}
+}   

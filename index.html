@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!-- Internet Explorer Meta -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- First Mobile Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>إدراك</title>
+        <link rel="icon" href="images/icon.png" type="image/icon type">
+		<link rel="stylesheet" href="css/bootstrap-arabic.css">
+		<link rel="stylesheet" href="css/flickity.min.css">
+		<link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/aos.css">
+		<link rel="stylesheet" href="css/style.css">
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+       	<script src="js/respond.min.js"></script>
+        <![endif]-->
+	</head>
+	<body onload="loadFunc()">
+        <div id="loading"></div>
+        <!--start header-->
+        <header class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-8 logo">
+                        <div class="">
+                            <img src="images/logo-white.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-xs-12">
+                        <div class="social-media">
+                            <ul>
+                             <li class="search-button">
+                                <a href="#">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </li>   
+                            <li>
+                                 <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </a>
+                            </li>
+                            
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-envelope"></i>
+                                    </a>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-xs-12">
+                         <!--start navbar-->
+                        <nav class="navbar navbar-default">
+                            <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul class="nav navbar-nav">
+                                  <li><a href="index.html">الرئيسية</a></li>
+                                  <li><a href="week-file.html" target="_blank">ملف الأسبوع</a></li>
+                                  <li><a href="articles.html" target="_blank">مقالات</a></li>
+                                  <li><a href="">ندوات و فعاليات</a></li>
+                                  <li><a href="initiatives.html" target="_blank">مبادرات</a></li>
+                                  <li><a href="#">بدايات</a></li>
+                                  <li><a href="#">تفاعل</a></li>
+                                  <li><a href="magazin.html">مجلة إدراك</a></li>
+                                  <li class="menu"><a href="#"><i class="fas fa-caret-down"></i></a>
+                                      <ul class="drop-menu">
+                                        <li><a href="#">إنفوغراف</a></li>
+                                        <li><a href="#">جدول الدورات</a></li>
+                                        <li><a href="#">شعر</a></li>
+                                        <li><a href="#">موسيقى</a></li>
+                                        <li><a href="#">سينما</a></li>
+                                        <li><a href="#">عمارة</a></li>
+                                        <li><a href="#">أسرة إدراك</a></li>
+                                      </ul>
+                                </li>
+                              </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--end header-->
+        
+        <!--start search area-->
+        <div class="search-area">
+            <div class="search-box open">
+                <input type="search" placeholder="بحث">
+            </div>
+            <a href="#">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+        <!--End search area-->
+        
+        <div class="slider">
+            <div class="main-carousel">
+                <div class="carousel-cell">
+                    <img src="images/01.jpeg">
+                    <div class="info">
+                        <h3>ملف الأسبوع</h3>
+                        <p>انترنت العراق: مافيات الفساد و تجهيز معظمه وهمي - Elaph</p>
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <img src="images/02.png">
+                    <div class="info">
+                        <h3>ملف الأسبوع</h3>
+                        <p>انترنت العراق: مافيات الفساد و تجهيز معظمه وهمي - Elaph</p>
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <img src="images/03.jpg">
+                    <div class="info">
+                        <h3>ملف الأسبوع</h3>
+                        <p>انترنت العراق: مافيات الفساد و تجهيز معظمه وهمي - Elaph</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--start marquee-->
+        <div class="marquee-wrapper">
+            <div class="marquee">
+                <ul>
+                    <li>    
+                        <p>
+                            <a href="news-detail.html">
+                              
+									هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+									النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق  
+                            </a>
+                        </p>
+                        <img src="images/icon-marquee.png" class="img-responsive">
+                    </li>
+                    <li>    
+                        <p>
+                            <a href="news-detail.html">
+                              
+									هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+									النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق  
+                            </a>
+                        </p>
+                        <img src="images/icon-marquee.png" class="img-responsive">
+                    </li>
+                    <li>    
+                        <p>
+                            <a href="news-detail.html">
+                              
+									هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+									النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق  
+                            </a>
+                        </p>
+                        <img src="images/icon-marquee.png" class="img-responsive">
+                    </li>
+                    <li>    
+                        <p>
+                            <a href="news-detail.html">
+                              
+									هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+									النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق  
+                            </a>
+                        </p>
+                        <img src="images/icon-marquee.png" class="img-responsive">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--End marquee-->
+        <!--Satrt news-section-->
+        <section class="news-section">
+            <div class="row custom-row">
+                <div class="col-sm-3 col-xs-12 img-box">
+                    <img src="images/poetry.jpg">
+                    <h3>شعر</h3> 
+                </div>
+                <div class="col-sm-3 col-xs-12 img-box">
+                    <img src="images/Music.jpg">
+                        <h3>موسيقا</h3>
+                </div>
+                <div class="col-sm-3 col-xs-12 img-box">
+                    <img src="images/cinema.jpg">
+                        <h3>سينما</h3>
+                </div>
+                <div class="col-sm-3 col-xs-12 img-box">
+                    <img src="images/buliding.jpg">
+                        <h3>عمارة</h3>
+                </div>
+            </div>
+        </section>
+	    <!--End news-section-->
+        
+	    <!--start news-section-->
+        <div class="about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="img-box">
+                            <img src="images/about.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-xs-12">
+                        <div class="text">
+                            <p>
+                                يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+        يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+        يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+        يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+        يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+        يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
+                                يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End news-section-->
+        
+        <!--Start others-->
+        <section class="others">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="articles-box">
+                            <h3>مقالات</h3>
+                            <a href="#">
+                                <div class="article">
+                                    <div class="img-box">
+                                        <img  class="img-responsive" src="images/user.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <h5>
+                                            <img class="img-responsive" src="images/cotation.PNG">
+                                            ليلى الشماع 
+                                        </h5>
+                                        <p>سماء العراق عبارة عن فوضى في الترددات و الخدمة هي</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="article">
+                                <a href="articles.html" target="_blank">
+                                    <div class="img-box">
+                                        <img  class="img-responsive" src="images/user.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <h5>
+                                            <img class="img-responsive" src="images/cotation.PNG">
+                                            ليلى الشماع 
+                                        </h5>
+                                        <p>سماء العراق عبارة عن فوضى في الترددات و الخدمة هي</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article">
+                                <a href="articles.html" target="_blank">
+                                    <div class="img-box">
+                                        <img  class="img-responsive" src="images/user.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <h5>
+                                            <img class="img-responsive" src="images/cotation.PNG">
+                                            ليلى الشماع 
+                                        </h5>
+                                        <p>سماء العراق عبارة عن فوضى في الترددات و الخدمة هي</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article">
+                                <a href="articles.html" target="_blank">
+                                    <div class="img-box">
+                                        <img  class="img-responsive" src="images/user.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <h5>
+                                            <img class="img-responsive" src="images/cotation.PNG">
+                                            ليلى الشماع 
+                                        </h5>
+                                        <p>سماء العراق عبارة عن فوضى في الترددات و الخدمة هي</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article">
+                                <a href="articles.html" target="_blank">
+                                    <div class="img-box">
+                                        <img  class="img-responsive" src="images/user.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <h5>
+                                            <img class="img-responsive" src="images/cotation.PNG">
+                                            ليلى الشماع 
+                                        </h5>
+                                        <p>سماء العراق عبارة عن فوضى في الترددات و الخدمة هي</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="col-sm-8 col-xs-12">
+                        <div class="week-file">
+                            <div class="img-box">
+                                <img src="images/02.png">
+                                <h5>ملف الأسبوع</h5>
+                            </div>
+                            <div class="info">
+                                <h4>سماء العراق عبارة عن فوضى في الترددات والخدمة هي الأسوأ</h4>
+                                <p>مسابقات في صناعة الأفلام و الرسم و الابتكار و الابداع والعديد من المجالات التي يمكن التقديم عليها عبر الانترنت والفوز بجوائز مالية و عينية من مؤسسات مرموقة</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 col-xs-12 col-sm-offset-1">
+                        <div class="ifografic">
+                            <img src="images/ads.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="initiatives">
+                            <div class="main-carousel">
+                                <div class="carousel-cell">
+                                    <div class="img-box">
+                                        <img src="images/01.jpeg">
+                                    </div>
+                                    <div class="info">
+                                        <h5>مبادرات</h5>
+                                        <p>انترنت العراق: مافيات الفساد و تجهيز معظمه وهمي - Elaph</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="img-box">
+                                        <img src="images/03.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <h5>مبادرات</h5>
+                                        <p>انترنت العراق: مافيات الفساد و تجهيز معظمه وهمي - Elaph</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="initiatives">
+                            <div class="main-carousel">
+                                <div class="carousel-cell">
+                                    <div class="img-box">
+                                        <img src="images/01.jpeg">
+                                    </div>
+                                    <div class="info">
+                                        <h5>ندوات و فعاليات</h5>
+                                        <p>انترنت العراق: مافيات الفساد و تجهيز معظمه وهمي - Elaph</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="img-box">
+                                        <img src="images/03.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <h5>ندوات و فعاليات</h5>
+                                        <p>انترنت العراق: مافيات الفساد و تجهيز معظمه وهمي - Elaph</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="newspaper">
+                            <h3>مجلة إدراك</h3>
+                            <p>تصفح العدد الأول</p>
+                            <img src="images/02.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-xs-12">
+                        <div class="interactions">
+                            <div class="img-box">
+                                <img src="images/03.jpg">
+                                <h5>تفاعل</h5>
+                            </div>
+                            <div class="info">
+                                <h4>سماء العراق عبارة عن فوضى في الترددات والخدمة هي الأسوأ</h4>
+                                <p>مسابقات في صناعة الأفلام و الرسم و الابتكار و الابداع والعديد من المجالات التي يمكن التقديم عليها عبر الانترنت والفوز بجوائز مالية و عينية من مؤسسات مرموقة</p>
+                                <ul>
+                                    <li><i class="fas fa-circle"></i>
+                                        السلحفاة اسرع من انترنت العراق</li>
+                                    <li><i class="fas fa-circle"></i>
+                                        سماء العراق عبارة عن فوضى في الترددات و الخدمة هي
+                                        الأسوأ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="tweets">
+                            <a href="#">
+                                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">That one was for you bro ❤️ RIP Jeremy Wisten 🕊 <a href="https://t.co/Njc2eRFcHk">pic.twitter.com/Njc2eRFcHk</a></p>&mdash; Mason Greenwood (@masongreenwood) <a href="https://twitter.com/masongreenwood/status/1321578781249855489?ref_src=twsrc%5Etfw">October 28, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="beginnings">
+                            <h3>بدايات</h3>
+                            <div class="img-box">
+                                <img src="images/03.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="course-schedule">
+                            <a href="Course-schedule.html">
+                                <div class="img-box">
+                                    <img src="images/01.jpeg">
+                                </div>
+                                <div class="info">
+                                    <h5>جدول الدورات</h5>
+                                    <p>انترنت العراق: مافيات الفساد و تجهيز معظمه وهمي - Elaph</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="idrak-family">
+                            <div class="img-box">
+                                <img src="images/01.jpeg">
+                            </div>
+                            <div class="info">
+                                <h5>أسرة إدراك</h5>
+                                <p>انترنت العراق: مافيات الفساد و تجهيز معظمه وهمي - Elaph</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End others-->
+        
+        <!--start video-->
+        <section class="video">
+            <div class="container">
+                <h4>فيديو</h4>
+                <div class="row">
+                    <div class="col-sm-8 col-xs-12">
+                        <div class="main-video">
+                            <a href="video.html" target="_blank">
+                                <div class="img-box">
+                                    <img src="images/01.jpeg">
+                                    <i class="fas fa-play"></i>
+                                    <!--<i class="fas fa-play-circle"></i>-->
+                                </div>
+                                <p>مميزة في مجالات الكتابة والتصوير و صناعة الافلام والرسم و التصميم والابتكار والعديد من المجالات الأخرى التي يمكنك التقديم عليها عبر الانترنت و الفوز بجوائز مالية وعينية من جهات</p>
+                                <p>مميزة في مجالات الكتابة والتصوير و صناعة الافلام والرسم و التصميم والابتكار والعديد من المجالات الأخرى التي يمكنك التقديم عليها عبر الانترنت و الفوز بجوائز مالية وعينية من جهات</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="videos-box">
+                            <div class="sub-video">
+                                <a href="video.html">
+                                    <img src="images/02.png">
+                                    <p>مميزة في مجالات الكتابة والتصوير و صناعة الافلام والرسم و التصميم والابتكار والعديد من المجالات الأخرى التي يمكنك التقديم عليها عبر الانترنت و الفوز بجوائز مالية وعينية من جهات</p>
+                                    <span>21:00</span>
+                                </a>
+                            </div>
+                            <div class="sub-video">
+                                <a href="video.html">
+                                    <img src="images/02.png">
+                                    <p>مميزة في مجالات الكتابة والتصوير و صناعة الافلام والرسم و التصميم والابتكار والعديد من المجالات الأخرى التي يمكنك التقديم عليها عبر الانترنت و الفوز بجوائز مالية وعينية من جهات</p>
+                                    <span>21:00</span>
+                                </a>
+                            </div>
+                            <div class="sub-video">
+                                <a href="video.html">
+                                    <img src="images/02.png">
+                                    <p>مميزة في مجالات الكتابة والتصوير و صناعة الافلام والرسم و التصميم والابتكار والعديد من المجالات الأخرى التي يمكنك التقديم عليها عبر الانترنت و الفوز بجوائز مالية وعينية من جهات</p>
+                                    <span>21:00</span>
+                                </a>
+                            </div>
+                            <div class="sub-video">
+                                <a href="video.html">
+                                    <img src="images/02.png">
+                                    <p>مميزة في مجالات الكتابة والتصوير و صناعة الافلام والرسم و التصميم والابتكار والعديد من المجالات الأخرى التي يمكنك التقديم عليها عبر الانترنت و الفوز بجوائز مالية وعينية من جهات</p>
+                                    <span>21:00</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End video-->
+        
+        <!--start footer-->
+        <footer>
+            <div class="top-part">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-10 col-xs-12">
+                            <div class="social-media">
+                                <ul> 
+                                <li>
+                                    <a href="#">
+                                       <i class="far fa-envelope"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-telegram-plane"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                     <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                </ul> 
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-xs-12">
+                            <div class="logo">
+                                <img src="images/logo-white.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-part">
+                <div class="container">
+                    <div class="site-map">
+                        <ul>
+                            <li><a href="#">الرئيسية</a></li>
+                            <li><a href="#">ملف الاسبوع</a></li>
+                            <li><a href="articles.html" target="_blank">مقالات</a></li>
+                            <li><a href="#">ندوات و فعاليات </a></li>
+                            <li><a href="#">مبادرات</a></li>
+                            <li><a href="#">بدايات</a></li>
+                            <li><a href="#">تفاعل</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">مجلة إدراك</a></li>
+                            <li><a href="#">إنفوغراف</a></li>
+                            <li><a href="#">أسرة إدراك</a></li>
+                            <li><a href="#">جدول  الدورات</a></li>
+                            <li><a href="#">من نحن</a></li>
+                            <li><a href="#">اتصل بنا</a></li>   
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="scroll-to-top">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <!--End footer-->
+		<script src="js/jquery-2.1.4.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/flickity.js"></script>
+        <script src="js/fade.js"></script>
+		<script src="js/all.js"></script>
+        <script src="js/jquery.marquee.min.js"></script>
+		<script src="js/plugin.js"></script>
+	</body>
+</html>
